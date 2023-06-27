@@ -1,0 +1,10 @@
+{
+  "id": "com.lg.app.signage",
+  "version": "0.0.1",
+  "vendor": "My Company",
+  "type": "web",
+  "main": "index.html",
+  "title": "SCAP on JS service",
+  "icon": "icon.png",
+  "largeIcon": "largeIcon.png"
+}

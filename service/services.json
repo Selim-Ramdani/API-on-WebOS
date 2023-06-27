@@ -1,0 +1,9 @@
+{
+  "id": "com.lg.app.signage.scapservice",
+  "description": "HelloWorld Service",
+  "services": [
+    {
+      "name": "com.lg.app.signage.scapservice"
+    }
+  ]
+}
