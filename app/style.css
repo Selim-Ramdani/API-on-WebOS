@@ -4,16 +4,24 @@ body {
   background-color: #202020;
 }
 
-div {
+#container {
   position: absolute;
   height: 100%;
   width: 100%;
   display: table;
 }
 
-h1 {
+h1,
+h2,
+p {
+  font-weight: bold;
   display: table-cell;
   vertical-align: middle;
   text-align: center;
   color: #ffffff;
+}
+
+p {
+  font-weight: bold;
+  font-size: 32px;
 }
