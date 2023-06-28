@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
     img.src = pictures[i].photo;
     console.log(pictures[i].photo);
     console.log(pictures[i].param);
+
     loopTimer = setTimeout(loop, 4000);
     ++i;
   })();
