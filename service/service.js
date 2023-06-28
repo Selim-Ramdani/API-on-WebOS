@@ -4,6 +4,10 @@ var service = new Service("com.lg.app.signage.scapservice");
 var Configuration = require("./api/configuration.js");
 var configuration = new Configuration(service);
 
+// ------------------------------------------------
+// ----             CONFIGURATION              ----
+// ------------------------------------------------
+
 // setPictureProperty
 service.register("setPictureProperty", function (message) {
   var options = {};
