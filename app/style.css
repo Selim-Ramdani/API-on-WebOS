@@ -11,6 +11,11 @@ body {
   display: table;
 }
 
+img {
+  width: 1920px;
+  height: 1080px;
+  object-fit: cover;
+}
 h1,
 h2,
 p {

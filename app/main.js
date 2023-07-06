@@ -9,15 +9,15 @@ document.addEventListener("DOMContentLoaded", function () {
   var img = document.querySelector(".photo");
 
   var pictures = [
-    { photo: "./images/01.png", param: 100 },
-    { photo: "./images/02.png", param: 75 },
-    { photo: "./images/03.png", param: 65 },
-    { photo: "./images/04.png", param: 60 },
-    { photo: "./images/05.png", param: 55 },
-    { photo: "./images/06.png", param: 45 },
-    { photo: "./images/07.png", param: 40 },
-    { photo: "./images/08.png", param: 35 },
-    { photo: "./images/09.png", param: 25 },
+    { photo: "./images/vitrine-eco-jour.jpg", param: 100 },
+    { photo: "./images/vitrine-eco-ombre.jpg", param: 75 },
+    // { photo: "./images/03.png", param: 65 },
+    { photo: "./images/vitrine-eco-nuageux.jpg", param: 60 },
+    // { photo: "./images/05.png", param: 55 },
+    // { photo: "./images/06.png", param: 45 },
+    { photo: "./images/vitrine-eco-pluie.jpg", param: 40 },
+    // { photo: "./images/08.png", param: 35 },
+    { photo: "./images/vitrine-eco-nuit.jpg", param: 25 },
   ];
 
   var i = 0;
@@ -34,14 +34,10 @@ document.addEventListener("DOMContentLoaded", function () {
       onSuccess: function (ret) {
         console.log("setPictureProperty: " + ret.returnData);
 
-        error.style.color = "#008633";
-        error.innerText += pictures[i].param;
       },
       onFailure: function (err) {
         console.log(JSON.stringify(err));
 
-        error.style.color = "#b00000";
-        error.innerText += JSON.stringify(err);
       },
     });
 
@@ -60,11 +56,9 @@ document.addEventListener("DOMContentLoaded", function () {
     method: "getSensorValues",
     onSuccess: function (ret) {
       error.style.color = "#008633";
-      error.innerText += ret.returnData;
     },
     onFailure: function (err) {
       error.style.color = "#b00000";
-      error.innerText += JSON.stringify(err);
     },
   });
   container.appendChild(error);
