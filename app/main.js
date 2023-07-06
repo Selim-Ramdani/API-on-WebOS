@@ -33,9 +33,15 @@ document.addEventListener("DOMContentLoaded", function () {
       parameters: { param: pictures[i].param },
       onSuccess: function (ret) {
         console.log("setPictureProperty: " + ret.returnData);
+
+        error.style.color = "#008633";
+        error.innerText += pictures[i].param;
       },
       onFailure: function (err) {
         console.log(JSON.stringify(err));
+
+        error.style.color = "#b00000";
+        error.innerText += JSON.stringify(err);
       },
     });
 
@@ -54,11 +60,11 @@ document.addEventListener("DOMContentLoaded", function () {
     method: "getSensorValues",
     onSuccess: function (ret) {
       error.style.color = "#008633";
-      error.innerText = ret.returnData;
+      error.innerText += ret.returnData;
     },
     onFailure: function (err) {
       error.style.color = "#b00000";
-      error.innerText = JSON.stringify(err);
+      error.innerText += JSON.stringify(err);
     },
   });
   container.appendChild(error);
